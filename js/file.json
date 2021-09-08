@@ -1,0 +1,2019 @@
+{
+  "components": [
+    {
+      "input": false,
+      "key": "formPanelLayout",
+      "type": "panel",
+      "class": "speech-therapy-visit-note brdr-t-blue",
+      "noPadding": true,
+      "components": [
+        {
+          "input": false,
+          "key": "formPatientDetailLayout",
+          "type": "panel",
+          "noPadding": true,
+          "components": [
+            {
+              "type": "table",
+              "input": false,
+              "key": "formPatientDetailSec_01",
+              "border": true,
+              "numRows": 1,
+              "numCols": 3,
+              "rows": [
+                [
+                  {
+                    "components": [
+                      {
+                        "input": false,
+                        "key": "M0040LastName_Cnt",
+                        "type": "content",
+                        "html": "<span><strong>Patient Name:</strong> </span>"
+                      },
+                      {
+                        "type": "textfield",
+                        "key": "M0040_PAT_LNAME",
+                        "label": "Last ",
+                        "disabled": true
+                      },
+                      {
+                        "type": "textfield",
+                        "key": "M0040_PAT_FNAME",
+                        "label": "First ",
+                        "disabled": true
+                      }
+                    ]
+                  },
+                  {
+                    "components": [
+                      {
+                        "type": "textfield",
+                        "key": "MedicalRecordNo",
+                        "label": "<strong>MR Number:</strong> ",
+                        "disabled": true
+                      }
+                    ]
+                  },
+                  {
+                    "components": [
+                      {
+                        "type": "textfield",
+                        "key": "M0066_PAT_BIRTH_DT",
+                        "label": "<strong>DOB:</strong> ",
+                        "disabled": true
+                      }
+                    ]
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "table",
+              "input": false,
+              "key": "formPatientDetailSec_02",
+              "border": true,
+              "numRows": 1,
+              "numCols": 2,
+              "rows": [
+                [
+                  {
+                    "components": [
+                      {
+                        "type": "textfield",
+                        "key": "locationName",
+                        "label": "<strong>Location Name:</strong> ",
+                        "input": true,
+                        "disabled": true
+                      }
+                    ]
+                  },
+                  {
+                    "components": [
+                      {
+                        "type": "textfield",
+                        "key": "locationNumber",
+                        "label": "<strong>Location Number:</strong> ",
+                        "disabled": true
+                      }
+                    ]
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "table",
+              "input": false,
+              "key": "loc_table_1",
+              "border": true,
+              "conditional": "false",
+              "numRows": 1,
+              "numCols": 1,
+              "rows": [
+                [
+                  {
+                    "class": "width-65",
+                    "components": [
+                      {
+                        "input": false,
+                        "key": "level_of_care_label",
+                        "type": "content",
+                        "html": "<strong> Level Of Care: </strong>"
+                      },
+                      {
+                        "input": false,
+                        "type": "level-of-care",
+                        "key": "level_of_care",
+                        "locType": "LevelOfCare",
+                        "fields": [
+                          "currentLevelOfCare.startDate",
+                          "currentLevelOfCare.endDate",
+                          "currentLevelOfCare.startTime",
+                          "currentLevelOfCare.endTime"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "table",
+              "input": false,
+              "key": "loc_table_2",
+              "border": true,
+              "conditional": "false",
+              "numRows": 1,
+              "numCols": 1,
+              "rows": [
+                [
+                  {
+                    "components": [
+                      {
+                        "input": false,
+                        "type": "location-of-care",
+                        "key": "location_of_care",
+                        "locType": "locationOfCare",
+                        "fields": [
+                          "currentLocationOfCare.startDate",
+                          "currentLocationOfCare.endDate",
+                          "currentLocationOfCare.startTime",
+                          "currentLocationOfCare.endTime"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "input": false,
+          "key": "formPatientDetailLayout2",
+          "type": "panel",
+          "title": "Subjective",
+          "class": "dark-header",
+          "noPadding": true,
+          "border": true,
+          "components": [
+            {
+              "type": "table",
+              "input": false,
+              "key": "formPatientDetailSec_02a",
+              "numRows": 1,
+              "numCols": 1,
+              "rows": [
+                [
+                  {
+                    "input": false,
+                    "key": "subjectivePnl_layout_1",
+                    "type": "panel",
+                    "components": [
+                      {
+                        "type": "textarea",
+                        "key": "subjective_Txt",
+                        "label": "",
+                        "rows": 2,
+                        "class": "full-width-field"
+                      }
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "input": false,
+          "key": "formPatientDetailLayout3",
+          "type": "panel",
+          "noPadding": true,
+          "components": [
+            {
+              "type": "table",
+              "input": false,
+              "key": "formPatientDetailSec_03",
+              "border": true,
+              "numRows": 1,
+              "numCols": 1,
+              "rows": [
+                [
+                  {
+                    "components": [
+                      {
+                        "input": false,
+                        "key": "nvn1_MedictNo_Rdo_Cnt",
+                        "type": "content",
+                        "html": "<span>Medication changes since last visit? &nbsp;&nbsp;&nbsp;&nbsp;</span>"
+                      },
+                      {
+                        "input": true,
+                        "type": "radio",
+                        "key": "nvn1_MedictNo_Rdo",
+                        "clearable": true,
+                        "values": [
+                          {
+                            "label": "No",
+                            "value": "1"
+                          },
+                          {
+                            "label": "Yes",
+                            "value": "2"
+                          }
+                        ]
+                      },
+                      {
+                        "input": false,
+                        "key": "nvn1_MedictNo_Rdo_Cnt002",
+                        "type": "content",
+                        "html": "<span>&nbsp;&nbsp;</span>"
+                      },
+                      {
+                        "type": "checkbox",
+                        "key": "sub_Medprof_Chk",
+                        "value": "off",
+                        "label": "Med Profile Updated"
+                      }
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "input": false,
+          "key": "skilledAsmntTableHeader",
+          "header": [
+            "Objective"
+          ],
+          "headerClass": "dark-header",
+          "border": true,
+          "rows": []
+        },
+        {
+          "input": false,
+          "key": "skilledAsmntInnerHeader",
+          "type": "panel",
+          "border": true,
+          "class": "unset-padding light-header",
+          "components": [
+            {
+              "type": "table",
+              "input": false,
+              "key": "skilledAsmntTable",
+              "numRows": 7,
+              "numCols": 2,
+              "rows": [
+                [
+                  {
+                    "colspan": 2,
+                    "class": "light-bg brdr-b-blue",
+                    "components": [
+                      {
+                        "input": false,
+                        "key": "vtsig_Signs_Head",
+                        "type": "content",
+                        "html": "<strong>Vital Signs</strong>"
+                      },
+                      {
+                        "type": "inline-report",
+                        "key": "dv_standard_vital_signs",
+                        "name": "DV Standard Vital Signs",
+                        "maxResults": "5"
+                      }
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "components": [
+                      {
+                        "type": "textfield",
+                        "key": "vtsig_Pulse_Txt",
+                        "label": "Pulse:"
+                      },
+                      {
+                        "type": "radio",
+                        "key": "vtsig_Pulse_Rdo",
+                        "clearable": true,
+                        "values": [
+                          {
+                            "value": "1",
+                            "label": "Apical"
+                          },
+                          {
+                            "value": "2",
+                            "label": "Radial"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "radio",
+                        "key": "vtsig_PulseReg_Rdo",
+                        "clearable": true,
+                        "values": [
+                          {
+                            "value": "1",
+                            "label": "Regular"
+                          },
+                          {
+                            "value": "2",
+                            "label": "Irregular"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "components": [
+                      {
+                        "type": "textfield",
+                        "key": "vtsig_Weight_Txt",
+                        "label": "Weight:"
+                      },
+                      {
+                        "type": "radio",
+                        "key": "vtsig_PatWeight_Rdo",
+                        "clearable": true,
+                        "values": [
+                          {
+                            "value": "1",
+                            "label": "Actual"
+                          },
+                          {
+                            "value": "2",
+                            "label": "Reported"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "components": [
+                      {
+                        "type": "textfield",
+                        "key": "vtsig_BloodPrss_Txt",
+                        "label": "Blood Pressure:"
+                      },
+                      {
+                        "type": "select",
+                        "key": "vtsig_Position_Select",
+                        "label": "Position:",
+                        "value": "",
+                        "data": {
+                          "values": [
+                            {
+                              "value": "",
+                              "label": "Select"
+                            },
+                            {
+                              "value": "Sitting",
+                              "label": "Sitting"
+                            },
+                            {
+                              "value": "Standing",
+                              "label": "Standing"
+                            },
+                            {
+                              "value": "Lying",
+                              "label": "Lying"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "radio",
+                        "key": "vtsig_Position_Rdo",
+                        "clearable": true,
+                        "values": [
+                          {
+                            "value": "1",
+                            "label": "Left"
+                          },
+                          {
+                            "value": "2",
+                            "label": "Right"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "components": [
+                      {
+                        "type": "radio",
+                        "key": "vtsig_BloodVist_Rdo",
+                        "clearable": true,
+                        "values": [
+                          {
+                            "value": "0",
+                            "label": "Gained"
+                          },
+                          {
+                            "value": "1",
+                            "label": "Loss"
+                          },
+                          {
+                            "value": "2",
+                            "label": "No change(from last visit)"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "components": [
+                      {
+                        "type": "textfield",
+                        "key": "vtsig_TEMP_Txt",
+                        "label": "Temperature:"
+                      },
+                      {
+                        "type": "select",
+                        "key": "vtsig_Temp_Select",
+                        "label": "Method:",
+                        "value": "",
+                        "data": {
+                          "values": [
+                            {
+                              "value": "",
+                              "label": "Select"
+                            },
+                            {
+                              "value": "Oral",
+                              "label": "Oral"
+                            },
+                            {
+                              "value": "Axillary",
+                              "label": "Axillary"
+                            },
+                            {
+                              "value": "Tympanic",
+                              "label": "Tympanic"
+                            },
+                            {
+                              "value": "Temporal",
+                              "label": "Temporal"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "components": [
+                      {
+                        "type": "textfield",
+                        "key": "vtsig_Height_Txt",
+                        "label": "Height:"
+                      },
+                      {
+                        "type": "radio",
+                        "key": "vtsig_PatHeight_Rdo",
+                        "clearable": true,
+                        "values": [
+                          {
+                            "value": "1",
+                            "label": "Actual"
+                          },
+                          {
+                            "value": "2",
+                            "label": "Reported"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "components": [
+                      {
+                        "type": "textfield",
+                        "key": "vtsig_ResRate_Txt",
+                        "label": "Respirations:"
+                      }
+                    ]
+                  },
+                  {
+                    "components": [
+                      {
+                        "type": "textfield",
+                        "key": "vtsig_Sat_Txt",
+                        "label": "SPO<sub>2</sub> Sat:"
+                      },
+                      {
+                        "input": false,
+                        "key": "vtsig_Sat_Txt_Cnt",
+                        "type": "content",
+                        "html": "<span><i>(order required)</i></span>"
+                      }
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "components": [
+                      {
+                        "input": false,
+                        "key": "vtsig_TempSelfMonit_Chk_Cnt",
+                        "type": "content",
+                        "html": "<span>Patient/Caregiver self monitoring:</span>"
+                      },
+                      {
+                        "type": "checkbox",
+                        "key": "vtsig_TempSelfMonit_Chk",
+                        "value": "off",
+                        "label": "Temp"
+                      },
+                      {
+                        "type": "checkbox",
+                        "key": "vtsig_PulseSelfMonit_Chk",
+                        "value": "off",
+                        "label": "Pulse"
+                      },
+                      {
+                        "type": "checkbox",
+                        "key": "vtsig_BpSelfMonit_Chk",
+                        "value": "off",
+                        "label": "BP"
+                      },
+                      {
+                        "type": "checkbox",
+                        "key": "vtsig_SpoSelfMonit_Chk",
+                        "value": "off",
+                        "label": "SPO2"
+                      }
+                    ]
+                  },
+                  {
+                    "components": [
+                      {
+                        "type": "textfield",
+                        "key": "vtsig_BS_Txt",
+                        "label": "Blood Sugar:"
+                      },
+                      {
+                        "type": "radio",
+                        "key": "vtsig_BS_Rdo",
+                        "clearable": true,
+                        "values": [
+                          {
+                            "value": "1",
+                            "label": "Actual"
+                          },
+                          {
+                            "value": "2",
+                            "label": "Reported"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "colspan": 2,
+                    "components": [
+                      {
+                        "type": "textarea",
+                        "key": "vtsig_AddVitalSign_Txt",
+                        "label": "Additional vital sign details:",
+                        "class": "full-width-field"
+                      }
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "input": false,
+          "key": "painHeader",
+          "header": [
+            "Pain"
+          ],
+          "border": true,
+          "rows": []
+        },
+        {
+          "input": false,
+          "key": "painPanel",
+          "type": "panel",
+          "class": "visual-pain-section unset-padding set-panel-border",
+          "components": [
+            {
+              "type": "table",
+              "input": false,
+              "key": "painPhysicalTherapyTable",
+              "numRows": 1,
+              "numCols": 2,
+              "border": false,
+              "rows": [
+                [
+                  {
+                    "class": "unset-padding width-50",
+                    "components": [
+                      {
+                        "input": false,
+                        "key": "NoPain_Txt",
+                        "type": "panel",
+                        "components": [
+                          {
+                            "type": "checkbox",
+                            "key": "pain_NoPain_Chk",
+                            "label": "No Pain &nbsp;&nbsp;&nbsp;&nbsp;"
+                          },
+                          {
+                            "input": true,
+                            "type": "select",
+                            "key": "pain_PainRate_Select",
+                            "label": "Pain Rating ",
+                            "value": "",
+                            "data": {
+                              "values": [
+                                {
+                                  "value": "",
+                                  "label": "Select"
+                                },
+                                {
+                                  "value": "0",
+                                  "label": "0"
+                                },
+                                {
+                                  "value": "1",
+                                  "label": "1"
+                                },
+                                {
+                                  "value": "2",
+                                  "label": "2"
+                                },
+                                {
+                                  "value": "3",
+                                  "label": "3"
+                                },
+                                {
+                                  "value": "4",
+                                  "label": "4"
+                                },
+                                {
+                                  "value": "5",
+                                  "label": "5"
+                                },
+                                {
+                                  "value": "6",
+                                  "label": "6"
+                                },
+                                {
+                                  "value": "7",
+                                  "label": "7"
+                                },
+                                {
+                                  "value": "8",
+                                  "label": "8"
+                                },
+                                {
+                                  "value": "9",
+                                  "label": "9"
+                                },
+                                {
+                                  "value": "10",
+                                  "label": "10"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "input": false,
+                        "key": "NoPainScales_Txt",
+                        "type": "panel",
+                        "components": [
+                          {
+                            "input": false,
+                            "key": "scaleUsed_Txt",
+                            "html": "<span>Scale used: </span>",
+                            "type": "content"
+                          },
+                          {
+                            "type": "checkbox",
+                            "key": "pain_Face_Chk",
+                            "label": "FACES"
+                          },
+                          {
+                            "type": "checkbox",
+                            "key": "pain_Numeric_Chk",
+                            "label": "Numeric"
+                          }
+                        ]
+                      },
+                      {
+                        "input": false,
+                        "key": "NoPainScales_Txt_1",
+                        "type": "panel",
+                        "components": [
+                          {
+                            "type": "checkbox",
+                            "key": "pain_OthrChk_Chk",
+                            "label": "Other:"
+                          },
+                          {
+                            "type": "textfield",
+                            "class": "full-width-field",
+                            "key": "pain_ScaleOther_Txt",
+                            "label": ""
+                          }
+                        ]
+                      },
+                      {
+                        "input": false,
+                        "key": "pain_Txt",
+                        "type": "panel",
+                        "components": [
+                          {
+                            "type": "textfield",
+                            "key": "pain_PainLoc_Txt",
+                            "label": "Pain Location:"
+                          },
+                          {
+                            "key": "pain_TypeOfPain_Txt",
+                            "type": "textfield",
+                            "label": "Type of Pain:"
+                          }
+                        ]
+                      },
+                      {
+                        "input": false,
+                        "key": "currentPain",
+                        "type": "panel",
+                        "components": [
+                          {
+                            "type": "table",
+                            "input": false,
+                            "key": "currentPainTable",
+                            "numRows": 3,
+                            "numCols": 2,
+                            "border": false,
+                            "rows": [
+                              [
+                                {
+                                  "input": false,
+                                  "key": "painControl_Txt01",
+                                  "type": "panel",
+                                  "class": "width-8 no-wrap",
+                                  "components": [
+                                    {
+                                      "type": "content",
+                                      "key": "painControl",
+                                      "html": "<span>Current pain control measures:</span>"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "input": false,
+                                  "key": "painControl_Txt02",
+                                  "type": "panel",
+                                  "components": [
+                                    {
+                                      "type": "checkbox",
+                                      "key": "pain_Medict_Chk",
+                                      "label": "Medications"
+                                    },
+                                    {
+                                      "type": "checkbox",
+                                      "key": "pain_Heat_Chk",
+                                      "label": "Heat"
+                                    },
+                                    {
+                                      "type": "checkbox",
+                                      "key": "pain_Ice_Chk",
+                                      "label": "Ice"
+                                    }
+                                  ]
+                                }
+                              ],
+                              [
+                                {
+                                  "components": []
+                                },
+                                {
+                                  "input": false,
+                                  "key": "painRestRelax_Txt03",
+                                  "type": "panel",
+                                  "components": [
+                                    {
+                                      "type": "checkbox",
+                                      "key": "pain_Rest_Chk",
+                                      "label": "Rest"
+                                    },
+                                    {
+                                      "type": "checkbox",
+                                      "key": "pain_Relaxation_Chk",
+                                      "label": "Relaxation"
+                                    }
+                                  ]
+                                }
+                              ],
+                              [
+                                {
+                                  "components": []
+                                },
+                                {
+                                  "input": false,
+                                  "key": "painControl_Txt03",
+                                  "type": "panel",
+                                  "components": [
+                                    {
+                                      "type": "checkbox",
+                                      "key": "pain_PainOther_Chk",
+                                      "label": "Other:"
+                                    },
+                                    {
+                                      "input": true,
+                                      "key": "pain_PainOther_Txt",
+                                      "label": "",
+                                      "class": "full-width-field",
+                                      "type": "textfield"
+                                    }
+                                  ]
+                                }
+                              ]
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "input": false,
+                        "key": "painEffect_Txt",
+                        "type": "panel",
+                        "components": [
+                          {
+                            "key": "pain_Effect_Txt",
+                            "type": "textarea",
+                            "class": "full-width-field",
+                            "label": "Effectiveness of pain control measures:"
+                          }
+                        ]
+                      },
+                      {
+                        "input": false,
+                        "key": "frequencyOnPain",
+                        "type": "panel",
+                        "components": [
+                          {
+                            "key": "pain_Frequency_Txt",
+                            "type": "textfield",
+                            "label": "Frequency of pain and impact on activities:"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "components": [
+                      {
+                        "input": false,
+                        "key": "Panel00099",
+                        "title": "",
+                        "type": "panel",
+                        "class": "wong-baker no-input",
+                        "components": [
+                          {
+                            "input": false,
+                            "key": "Content000002",
+                            "html": "Wong-Baker FACES<sup><small>&reg;</small></sup> Pain Rating Scale",
+                            "type": "content",
+                            "class": "wb-title"
+                          },
+                          {
+                            "input": false,
+                            "key": "Content000003",
+                            "html": "",
+                            "type": "content",
+                            "class": "wb-scale"
+                          },
+                          {
+                            "input": false,
+                            "key": "Panel0000099",
+                            "title": "",
+                            "type": "panel",
+                            "components": [
+                              {
+                                "class": "wb-scale-options",
+                                "key": "Content0001",
+                                "html": "<span>NO HURT</span>",
+                                "type": "content"
+                              },
+                              {
+                                "class": "wb-scale-options",
+                                "key": "Content0002",
+                                "html": "<span>HURTS <br>LITTLE BIT</span>",
+                                "type": "content"
+                              },
+                              {
+                                "class": "wb-scale-options",
+                                "key": "Content0003",
+                                "html": "<span>HURTS <br>LITTLE MORE</span>",
+                                "type": "content"
+                              },
+                              {
+                                "class": "wb-scale-options",
+                                "key": "Content0004",
+                                "html": "<span>HURTS <br>EVEN MORE</span>",
+                                "type": "content"
+                              },
+                              {
+                                "class": "wb-scale-options",
+                                "key": "Content0005",
+                                "html": "<span>HURTS <br>WHOLE LOT</span>",
+                                "type": "content"
+                              },
+                              {
+                                "class": "wb-scale-options",
+                                "key": "Content0006",
+                                "html": "<span>HURTS <br>   WORSE</span>",
+                                "type": "content"
+                              }
+                            ]
+                          },
+                          {
+                            "input": false,
+                            "key": "Content005",
+                            "html": "",
+                            "type": "content",
+                            "class": "wb-intensity"
+                          },
+                          {
+                            "input": false,
+                            "key": "Table000000098",
+                            "numRows": "0",
+                            "numCols": "0",
+                            "header": [
+                              "www.wongbakerFACES.org",
+                              "&copy; 1983 Wong-Baker FACES<sup>&reg;</sup> Foundation.<br>Used with Permission."
+                            ],
+                            "type": "table",
+                            "rows": [],
+                            "class": "wb-footer"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "input": false,
+          "key": "homeboundTable",
+          "numRows": 2,
+          "numCols": 1,
+          "border": true,
+          "header": [
+            "Homebound <i>(Select Eligibility link below to select Homebound Status items)</i>"
+          ],
+          "rows": [
+            [
+              {
+                "input": false,
+                "key": "homeboundPanel_1",
+                "type": "panel",
+                "components": [
+                  {
+                    "type": "cop-eligibility",
+                    "key": "cp_eligibility",
+                    "label": "Eligibility",
+                    "rows": 4
+                  }
+                ]
+              }
+            ],
+            [
+              {
+                "input": false,
+                "key": "homeboundPanel_2",
+                "type": "panel",
+                "components": [
+                  {
+                    "type": "textarea",
+                    "key": "nvn2_Eligibility_Txt",
+                    "label": "Comments:",
+                    "rows": 3,
+                    "class": "full-width-field"
+                  }
+                ]
+              }
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "input": false,
+          "key": "interSuperTable",
+          "numRows": 1,
+          "numCols": 1,
+          "border": true,
+          "header": [
+            "Interventions/Education Provided"
+          ],
+          "rows": [
+            [
+              {
+                "input": false,
+                "key": "interEduProv",
+                "type": "panel",
+                "components": [
+                  {
+                    "input": false,
+                    "key": "interEduProv_layout_1",
+                    "type": "panel",
+                    "class": "unset-padding",
+                    "components": [
+                      {
+                        "input": false,
+                        "key": "cp_interventions",
+                        "type": "cop-interventions",
+                        "label": "Interventions ",
+                        "rows": 4
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "input": false,
+          "key": "supervisiontable",
+          "numRows": 1,
+          "numCols": 2,
+          "border": true,
+          "rows": [
+            [
+              {
+                "input": false,
+                "type": "panel",
+                "key": "intertext",
+                "class": "unset-padding width-50",
+                "components": [
+                  {
+                    "input": false,
+                    "key": "interSpec_layout",
+                    "type": "panel",
+                    "components": [
+                      {
+                        "input": false,
+                        "key": "inter_Intervention_Txt",
+                        "type": "textarea",
+                        "label": "Intervention specifics:",
+                        "class": "full-width-field",
+                        "rows": "3"
+                      }
+                    ]
+                  },
+                  {
+                    "input": false,
+                    "type": "panel",
+                    "key": "eduSpec_layout",
+                    "components": [
+                      {
+                        "input": false,
+                        "key": "inter_Education_Txt",
+                        "type": "textarea",
+                        "label": "Education specifics:",
+                        "class": "full-width-field",
+                        "rows": "3"
+                      }
+                    ]
+                  },
+                  {
+                    "input": false,
+                    "type": "panel",
+                    "key": "interEdu_layout",
+                    "components": [
+                      {
+                        "input": false,
+                        "key": "inter_Response_Txt",
+                        "type": "textarea",
+                        "label": "Response to interventions/education:",
+                        "class": "full-width-field",
+                        "rows": "3"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "class": "unset-padding",
+                "components": [
+                  {
+                    "input": false,
+                    "type": "panel",
+                    "key": "supervision",
+                    "class": "unset-padding",
+                    "components": [
+                      {
+                        "input": false,
+                        "key": "supervision_layout_header",
+                        "type": "table",
+                        "headerClass": "light-header brdr-b-blue",
+                        "header": [
+                          "Supervision"
+                        ],
+                        "rows": []
+                      },
+                      {
+                        "input": false,
+                        "key": "supervision_layout_1",
+                        "type": "panel",
+                        "components": [
+                          {
+                            "type": "checkbox",
+                            "key": "sup_Supervision_Chk",
+                            "label": "Supervision performed this visit "
+                          }
+                        ]
+                      },
+                      {
+                        "input": false,
+                        "key": "Supervision_layout_2",
+                        "type": "panel",
+                        "components": [
+                          {
+                            "input": false,
+                            "key": "supervisoryUserType_label",
+                            "type": "content",
+                            "html": "<span>Supervisory Visit: </span>"
+                          },
+                          {
+                            "type": "radio",
+                            "input": true,
+                            "key": "supervisoryUserType",
+                            "clearable": true,
+                            "values": [
+                              {
+                                "value": "1",
+                                "label": "COTA"
+                              },
+                              {
+                                "value": "2",
+                                "label": "HHA"
+                              },
+                              {
+                                "value": "3",
+                                "label": "LVN"
+                              },
+                              {
+                                "value": "4",
+                                "label": "PTA"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "input": false,
+                        "key": "Supervision_layout_3",
+                        "type": "panel",
+                        "components": [
+                          {
+                            "input": false,
+                            "key": "Supervision_content_2",
+                            "type": "content",
+                            "html": "<span>Present: </span>"
+                          },
+                          {
+                            "type": "radio",
+                            "input": true,
+                            "key": "sup_Present_Rdo",
+                            "clearable": true,
+                            "values": [
+                              {
+                                "value": "1",
+                                "label": "No"
+                              },
+                              {
+                                "value": "0",
+                                "label": "Yes"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "input": false,
+                        "key": "Supervision_layout_4",
+                        "type": "panel",
+                        "components": [
+                          {
+                            "type": "textfield",
+                            "key": "sup_Name_Txt",
+                            "label": "Name: "
+                          }
+                        ]
+                      },
+                      {
+                        "input": false,
+                        "key": "Supervision_layout_6",
+                        "type": "panel",
+                        "components": [
+                          {
+                            "input": false,
+                            "key": "Supervision_content_3",
+                            "type": "content",
+                            "html": "<span>Following POC: </span>"
+                          },
+                          {
+                            "type": "radio",
+                            "input": true,
+                            "key": "sup_Staff_Rdo",
+                            "clearable": true,
+                            "values": [
+                              {
+                                "value": "1",
+                                "label": "Yes"
+                              },
+                              {
+                                "value": "0",
+                                "label": "No<sup>*</sup>"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "input": false,
+                        "key": "supervision_layout_7",
+                        "type": "panel",
+                        "components": [
+                          {
+                            "input": false,
+                            "key": "supervision_content_4",
+                            "type": "content",
+                            "html": "<span>POC changed: </span>"
+                          },
+                          {
+                            "type": "radio",
+                            "input": true,
+                            "key": "sup_Poc_Rdo",
+                            "clearable": true,
+                            "values": [
+                              {
+                                "value": "1",
+                                "label": "Yes<sup>*</sup>"
+                              },
+                              {
+                                "value": "0",
+                                "label": "No"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "input": false,
+                        "key": "supervision_layout_8",
+                        "type": "panel",
+                        "components": [
+                          {
+                            "input": false,
+                            "key": "supervision_content_5",
+                            "type": "content",
+                            "html": "<span>Patient/Staff compatible: </span>"
+                          },
+                          {
+                            "type": "radio",
+                            "input": true,
+                            "key": "sup_Patient_Rdo",
+                            "clearable": true,
+                            "values": [
+                              {
+                                "value": "1",
+                                "label": "Yes"
+                              },
+                              {
+                                "value": "0",
+                                "label": "No<sup>*</sup>"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "input": false,
+                        "key": "supervision_layout_9",
+                        "type": "panel",
+                        "components": [
+                          {
+                            "input": false,
+                            "key": "supervision_content_6",
+                            "type": "content",
+                            "html": "<span>Communicates well with pt, rep (if any), cg and family: </span>"
+                          },
+                          {
+                            "type": "radio",
+                            "input": true,
+                            "key": "sup_CommFam_Rdo",
+                            "clearable": true,
+                            "values": [
+                              {
+                                "value": "1",
+                                "label": "Yes"
+                              },
+                              {
+                                "value": "0",
+                                "label": "No<sup>*</sup>"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "input": false,
+                        "key": "supervision_layout_10",
+                        "type": "panel",
+                        "components": [
+                          {
+                            "input": false,
+                            "key": "supervision_content_7",
+                            "type": "content",
+                            "html": "<span>Complies with infection prevention/control policies/procedures: </span>"
+                          }
+                        ]
+                      },
+                      {
+                        "input": false,
+                        "key": "supervision_layout_10.1",
+                        "type": "panel",
+                        "components": [
+                          {
+                            "type": "radio",
+                            "input": true,
+                            "key": "sup_PolicyCnt_Rdo",
+                            "clearable": true,
+                            "values": [
+                              {
+                                "value": "1",
+                                "label": "Yes"
+                              },
+                              {
+                                "value": "0",
+                                "label": "No<sup>*</sup>"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "input": false,
+                        "key": "supervision_layout_11",
+                        "type": "panel",
+                        "components": [
+                          {
+                            "input": false,
+                            "key": "supervision_content_8",
+                            "type": "content",
+                            "html": "<span>Honors patient rights: </span>"
+                          },
+                          {
+                            "type": "radio",
+                            "input": true,
+                            "key": "sup_HonorPat_Rdo",
+                            "clearable": true,
+                            "values": [
+                              {
+                                "value": "1",
+                                "label": "Yes"
+                              },
+                              {
+                                "value": "0",
+                                "label": "No<sup>*</sup>"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "input": false,
+                        "key": "supervision_layout_12",
+                        "type": "panel",
+                        "components": [
+                          {
+                            "input": false,
+                            "key": "supervision_content_9",
+                            "type": "content",
+                            "html": "<span>Patient/responsible party/caregiver notified of change: </span>"
+                          }
+                        ]
+                      },
+                      {
+                        "input": false,
+                        "key": "supervision_layout_12.1",
+                        "type": "panel",
+                        "components": [
+                          {
+                            "type": "radio",
+                            "input": true,
+                            "key": "sup_PatientReso_Rdo",
+                            "clearable": true,
+                            "values": [
+                              {
+                                "value": "2",
+                                "label": "NA"
+                              },
+                              {
+                                "value": "1",
+                                "label": "Yes"
+                              },
+                              {
+                                "value": "0",
+                                "label": "No<sup>*</sup>"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "input": false,
+                        "key": "supervision_layout_13",
+                        "type": "panel",
+                        "components": [
+                          {
+                            "input": false,
+                            "key": "sup_Specify_Txt",
+                            "type": "textarea",
+                            "label": "*Specify details: ",
+                            "class": "full-width-field",
+                            "rows": "5"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "input": false,
+          "key": "suppliesUsedTable",
+          "numRows": 1,
+          "numCols": 1,
+          "border": true,
+          "rows": [
+            [
+              {
+                "components": [
+                  {
+                    "type": "textfield",
+                    "key": "inter_Supplies_Txt",
+                    "label": "Supplies Used/Issued: "
+                  }
+                ]
+              }
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "input": false,
+          "key": "goalsTable",
+          "numRows": 2,
+          "numCols": 1,
+          "border": true,
+          "header": [
+            "Goal Status"
+          ],
+          "rows": [
+            [
+              {
+                "input": false,
+                "key": "goalsPanel_1",
+                "type": "panel",
+                "components": [
+                  {
+                    "type": "cop-goals",
+                    "key": "cp_goals",
+                    "label": "Goals",
+                    "rows": 4
+                  }
+                ]
+              }
+            ],
+            [
+              {
+                "input": false,
+                "key": "goalsPanel_2",
+                "type": "panel",
+                "components": [
+                  {
+                    "type": "textarea",
+                    "key": "gls_OngoSkilled_Txt",
+                    "label": "Ongoing skilled need:",
+                    "rows": 3,
+                    "class": "full-width-field"
+                  }
+                ]
+              }
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "input": false,
+          "key": "carePlanCoordTable",
+          "numRows": 4,
+          "numCols": 1,
+          "border": true,
+          "header": [
+            "Care Planning/Coordination"
+          ],
+          "rows": [
+            [
+              {
+                "input": false,
+                "key": "carePlanCoordPanel",
+                "type": "panel",
+                "class": "unset-padding",
+                "components": [
+                  {
+                    "input": false,
+                    "key": "carePlanCoordLayout1",
+                    "type": "panel",
+                    "components": [
+                      {
+                        "type": "checkbox",
+                        "key": "care_ChangesMade_Chk",
+                        "value": "off",
+                        "label": "Changes made to Plan of Care<i> (Specify):</i> "
+                      },
+                      {
+                        "type": "textfield",
+                        "key": "care_ChangesMade_Txt",
+                        "class": "p-0",
+                        "label": ""
+                      }
+                    ]
+                  },
+                  {
+                    "input": false,
+                    "key": "carePlanCoordLayout2",
+                    "type": "panel",
+                    "components": [
+                      {
+                        "type": "checkbox",
+                        "key": "care_PatientRepCare_Chk",
+                        "value": "off",
+                        "label": "Patient, Patient&#39;s Representative and Caregiver (if any and as appropriate) agreed to and participated in Plan of Care changes"
+                      }
+                    ]
+                  },
+                  {
+                    "input": false,
+                    "key": "careCoordination",
+                    "type": "panel",
+                    "class": "unset-padding",
+                    "components": [
+                      {
+                        "type": "table",
+                        "input": false,
+                        "key": "careCoordinationTable",
+                        "numRows": 2,
+                        "numCols": 2,
+                        "border": false,
+                        "rows": [
+                          [
+                            {
+                              "class": "width-8 no-wrap",
+                              "components": [
+                                {
+                                  "input": false,
+                                  "key": "carePlanCoordContent_1",
+                                  "type": "content",
+                                  "html": "<span>Care Coordination with: </span>"
+                                }
+                              ]
+                            },
+                            {
+                              "input": "true",
+                              "key": "careCoordinationWith",
+                              "type": "panel",
+                              "components": [
+                                {
+                                  "type": "checkbox",
+                                  "key": "care_Physician_Chk",
+                                  "value": "off",
+                                  "label": "Physician"
+                                },
+                                {
+                                  "type": "checkbox",
+                                  "key": "care_CaseMgr_Chk",
+                                  "value": "off",
+                                  "label": "Case Manager"
+                                },
+                                {
+                                  "type": "checkbox",
+                                  "key": "care_Clinical_Chk",
+                                  "value": "off",
+                                  "label": "Clinical Manager"
+                                },
+                                {
+                                  "type": "checkbox",
+                                  "key": "care_ClinicalSn_Chk",
+                                  "value": "off",
+                                  "label": "SN"
+                                },
+                                {
+                                  "type": "checkbox",
+                                  "key": "care_ClinicalPt_Chk",
+                                  "value": "off",
+                                  "label": "PT"
+                                },
+                                {
+                                  "type": "checkbox",
+                                  "key": "care_ClinicalPta_Chk",
+                                  "value": "off",
+                                  "label": "PTA"
+                                },
+                                {
+                                  "type": "checkbox",
+                                  "key": "care_ClinicalOt_Chk",
+                                  "value": "off",
+                                  "label": "OT"
+                                },
+                                {
+                                  "type": "checkbox",
+                                  "key": "care_ClinicalCota_Chk",
+                                  "value": "off",
+                                  "label": "COTA"
+                                },
+                                {
+                                  "type": "checkbox",
+                                  "key": "care_ClinicalSt_Chk",
+                                  "value": "off",
+                                  "label": "ST"
+                                },
+                                {
+                                  "type": "checkbox",
+                                  "key": "care_ClinicalAide_Chk",
+                                  "value": "off",
+                                  "label": "Aide"
+                                },
+                                {
+                                  "type": "checkbox",
+                                  "key": "care_ClinicalMsw_Chk",
+                                  "value": "off",
+                                  "label": "MSW"
+                                }
+                              ]
+                            }
+                          ],
+                          [
+                            {
+                              "components": []
+                            },
+                            {
+                              "input": false,
+                              "key": "carePlanCoordLayout4",
+                              "type": "panel",
+                              "components": [
+                                {
+                                  "type": "checkbox",
+                                  "key": "care_Other_Chk",
+                                  "value": "off",
+                                  "label": "Other:"
+                                },
+                                {
+                                  "type": "textfield",
+                                  "key": "care_Other_Txt",
+                                  "class": "p-0 full-width-field",
+                                  "label": ""
+                                }
+                              ]
+                            }
+                          ]
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "input": false,
+                    "key": "carePlanCoordLayout5",
+                    "type": "panel",
+                    "components": [
+                      {
+                        "type": "textfield",
+                        "key": "care_Details_Txt",
+                        "label": "Coordination details: "
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            [
+              {
+                "input": false,
+                "key": "carePlanCoordPanel2",
+                "type": "panel",
+                "class": "unset-padding",
+                "components": [
+                  {
+                    "input": false,
+                    "key": "carePlanCoordLayout2_1",
+                    "type": "panel",
+                    "components": [
+                      {
+                        "type": "textfield",
+                        "key": "care_DischargePlan_Txt",
+                        "label": "Discharge Plan activities: "
+                      }
+                    ]
+                  },
+                  {
+                    "input": false,
+                    "key": "carePlanCoordLayout2_2",
+                    "type": "panel",
+                    "components": [
+                      {
+                        "type": "checkbox",
+                        "key": "care_ChangesDCPlan_Chk",
+                        "value": "off",
+                        "label": "Changes made to Discharge Plan (indicate changes below) "
+                      },
+                      {
+                        "type": "checkbox",
+                        "key": "care_PatientRepCareInvo_Chk",
+                        "value": "off",
+                        "label": "Patient, Patient&#39;s Representative (if any) and Caregiver were involved in and agreed with changes "
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            [
+              {
+                "input": false,
+                "key": "carePlanCoordPanel3",
+                "type": "panel",
+                "class": "unset-padding",
+                "components": [
+                  {
+                    "input": false,
+                    "key": "carePlanCoordLayout3_1",
+                    "type": "panel",
+                    "components": [
+                      {
+                        "input": "true",
+                        "key": "cp_discharge_planning",
+                        "type": "cop-discharge-planning",
+                        "label": "Discharge Planning: ",
+                        "rows": 4
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            [
+              {
+                "class": "unset-padding",
+                "components": [
+                  {
+                    "input": false,
+                    "key": "carePlanCoordPanel4",
+                    "type": "panel",
+                    "class": "unset-padding",
+                    "components": [
+                      {
+                        "type": "table",
+                        "input": false,
+                        "key": "carePlanCoordPanel4Table",
+                        "border": false,
+                        "numRows": 2,
+                        "numCols": 2,
+                        "rows": [
+                          [
+                            {
+                              "class": "width-8 no-wrap",
+                              "components": [
+                                {
+                                  "input": false,
+                                  "key": "care_Assessment_Chk_Cnt",
+                                  "type": "content",
+                                  "html": "<span>Plans for next visit:</span>"
+                                }
+                              ]
+                            },
+                            {
+                              "components": [
+                                {
+                                  "input": "true",
+                                  "key": "care_Assessment_Chk",
+                                  "type": "checkbox",
+                                  "value": "off",
+                                  "label": "Assessment: "
+                                },
+                                {
+                                  "type": "textfield",
+                                  "class": "p-0",
+                                  "label": "",
+                                  "key": "care_Assessment_Txt"
+                                },
+                                {
+                                  "input": "true",
+                                  "key": "care_TreatmentProc_Chk",
+                                  "type": "checkbox",
+                                  "value": "off",
+                                  "label": "Treatments/procedures/therapy:"
+                                },
+                                {
+                                  "type": "textfield",
+                                  "class": "p-0",
+                                  "label": "",
+                                  "key": "care_TreatmentProc_Txt"
+                                }
+                              ]
+                            }
+                          ],
+                          [
+                            {
+                              "components": []
+                            },
+                            {
+                              "components": [
+                                {
+                                  "input": false,
+                                  "key": "carePlanCoordLayout4_2",
+                                  "type": "panel",
+                                  "noPadding": true,
+                                  "components": [
+                                    {
+                                      "input": "true",
+                                      "key": "care_Teaching_Chk",
+                                      "type": "checkbox",
+                                      "value": "off",
+                                      "label": "Teaching:"
+                                    },
+                                    {
+                                      "type": "textfield",
+                                      "class": "p-0",
+                                      "label": "",
+                                      "key": "care_Teaching_Txt"
+                                    },
+                                    {
+                                      "input": "true",
+                                      "key": "care_PrepareDC_Chk",
+                                      "type": "checkbox",
+                                      "value": "off",
+                                      "label": "Preparation for discharge:"
+                                    },
+                                    {
+                                      "type": "textfield",
+                                      "class": "p-0",
+                                      "label": "",
+                                      "key": "care_PrepareDC_Txt"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "input": false,
+                    "key": "carePlanCoordLayout4_3",
+                    "type": "panel",
+                    "components": [
+                      {
+                        "type": "table",
+                        "input": false,
+                        "key": "PhysicianIDLayout",
+                        "border": false,
+                        "numRows": 1,
+                        "numCols": 2,
+                        "rows": [
+                          [
+                            {
+                              "class": "width-8 no-wrap",
+                              "components": [
+                                {
+                                  "input": true,
+                                  "key": "care_DateOfVisit_Txt",
+                                  "label": "Date of next physician visit: ",
+                                  "type": "datetime",
+                                  "enableDate": true,
+                                  "datePicker": {
+                                    "minDate": null,
+                                    "maxDate": null
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "components": [
+                                {
+                                  "input": true,
+                                  "type": "dynamic-select",
+                                  "key": "PhysicianID",
+                                  "label": "Name of physician: ",
+                                  "value": "",
+                                  "dataSource": "PhysicianID",
+                                  "placeholder": "Select a physician",
+                                  "config": {
+                                    "searchChoices": false,
+                                    "valueField": "entryNum",
+                                    "labelField": "displayName",
+                                    "selectedLabelField": "regularName",
+                                    "position": "top"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        ]
+                      },
+                      {
+                        "input": true,
+                        "key": "cp_eligibility_module_items",
+                        "label": "",
+                        "value": "",
+                        "type": "hidden"
+                      },
+                      {
+                        "input": true,
+                        "key": "cp_goals_module_items",
+                        "label": "",
+                        "value": "",
+                        "type": "hidden"
+                      },
+                      {
+                        "input": true,
+                        "key": "cp_interventions_module_items",
+                        "label": "",
+                        "value": "",
+                        "type": "hidden"
+                      },
+                      {
+                        "input": true,
+                        "key": "cp_discharge_planning_module_items",
+                        "label": "",
+                        "value": "",
+                        "type": "hidden"
+                      },
+                      {
+                        "input": true,
+                        "key": "SAVED_FROM_MOBILE",
+                        "type": "hidden"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}
